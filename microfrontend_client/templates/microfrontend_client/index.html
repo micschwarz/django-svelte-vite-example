@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -10,7 +12,7 @@
     <div id="target"></div>
 
     <script type="module">
-        import Counter from '/static/dist/ext/counter.js';
+        import Counter from '{% static "counter.js" %}';
         new Counter({
             target: document.getElementById('target'),
         });

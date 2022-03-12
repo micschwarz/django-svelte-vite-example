@@ -133,9 +133,11 @@ DJANGO_VITE_DEV_MODE = False
 
 STATICFILES_DIRS = [
     DJANGO_VITE_ASSETS_PATH,
+    BASE_DIR / 'frontend/templates/frontend/dist/ext/'
 ]
 
 if DJANGO_VITE_DEV_MODE:
     STATICFILES_DIRS = [
-        BASE_DIR / 'frontend/templates/frontend/'
+        BASE_DIR / 'frontend/templates/frontend/',
+        BASE_DIR / 'frontend/templates/frontend/dist/ext/'
     ]
