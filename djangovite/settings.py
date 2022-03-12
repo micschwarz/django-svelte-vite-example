@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django_vite',
     'frontend.apps.FrontendConfig',
+    'microfrontend_client.apps.MicrofrontendClientConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -124,7 +125,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DJANGO_VITE_ASSETS_PATH = BASE_DIR / 'frontend/templates/frontend/dist/'
+DJANGO_VITE_ASSETS_PATH = BASE_DIR / 'frontend/templates/frontend/dist/app/'
 
 STATICFILES_DIRS = [
     DJANGO_VITE_ASSETS_PATH,

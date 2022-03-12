@@ -5,7 +5,7 @@
     };
 </script>
 
-<button on:click={increment}>
+<button class="p-3" on:click={increment}>
     Clicks: {count}
 </button>
 
@@ -16,11 +16,10 @@
     button {
         font-family: inherit;
         font-size: inherit;
-        padding: 1em 2em;
         color: $svelte_color;
         background-color: color.change($svelte_color, $alpha: 0.1);
         border-radius: 2em;
-        border: 2px solid rgba(255, 62, 0, 0);
+        border: 2px solid transparent;
         outline: none;
         width: 200px;
         font-variant-numeric: tabular-nums;

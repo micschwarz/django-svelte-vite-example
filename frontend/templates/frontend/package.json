@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:ext": "vite build --watch --config vite.config.ext.ts",
     "build": "vite build",
+    "build:ext": "vite build --config vite.config.ext.ts",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
