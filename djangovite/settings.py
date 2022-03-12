@@ -118,6 +118,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = 'static/'
+
 STATIC_URL = 'static/'
 
 # Default primary key field type
@@ -127,9 +129,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DJANGO_VITE_ASSETS_PATH = BASE_DIR / 'frontend/templates/frontend/dist/app/'
 
+DJANGO_VITE_DEV_MODE = False
+
 STATICFILES_DIRS = [
     DJANGO_VITE_ASSETS_PATH,
-    BASE_DIR / 'frontend/templates/frontend/'
 ]
 
-DJANGO_VITE_DEV_MODE = True
+if DJANGO_VITE_DEV_MODE:
+    STATICFILES_DIRS = [
+        BASE_DIR / 'frontend/templates/frontend/'
+    ]

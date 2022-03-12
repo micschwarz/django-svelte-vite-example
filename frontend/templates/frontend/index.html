@@ -1,10 +1,11 @@
 {% load django_vite %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="{% vite_asset_url '/favicon.ico' %}" />
+    <link rel="icon" href="{% static 'frontend/favicon.ico' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Svelte + TS + Vite App</title>
     {% vite_hmr_client %}
